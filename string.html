@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const name="prashant";
+        const videoCount=50;
+        //another way to declare a string.
+        const gameName=new String('prashant');// it gives output in oobject form.
+       // console.log(gameName[0]);//{p}
+
+       // console.log(gameName.length);//{8}
+        //console.log(gameName.toUpperCase());// changed to upper case but not changed into original it changed into tha copy becouse of stack memory.
+
+        //console.log(gameName.charAt(2));//{a}
+       // console.log(gameName.indexOf('s'));//{3}
+        //continue to line 30
+
+
+
+       // console.log(name+videoCount+"kratos");// concatinate all three strinngs
+       //++ Another way and better to use (string interpulation)
+
+       //console.log(`hello my name is ${name} and my videocount is ${videoCount}`);
+         
+        const newString=gameName.substring(0,4);
+       // console.log(newString);//{pras} *last value not included.
+ 
+        const secString=gameName.slice(-8,4);
+      //  console.log(secString);//{pras}
+
+        const tri=" sohit  ";// extra spaces to solve this we use trim
+       // console.log(tri);
+        //console.log(tri.trim());// remove extra spaces
+
+        const  url="https://github.com/sohit%20verma"
+        const tap=url.replace('%20','-')
+        console.log(tap);//replaces
+
+        const tap1=url.includes('verma')
+        console.log(tap1);// true
+
+        console.log(name.split('-'));
+
+    </script>
+
+</body>
+</html>
