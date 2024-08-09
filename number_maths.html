@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const score=400;
+       // console.log(score);
+        const balance= new Number(100)
+       // console.log(balance);
+
+        const tap5=balance.toString();
+        //console.log(tap5);
+        //console.log(typeof tap5);
+
+        const tap6=balance.toFixed(2);// it gives precision value it means it give only n number after point to resolve the problem of 23.65555555845 etc.
+        //console.log(tap6);
+
+        const Numl=123.8964
+       // numO=Numl.toPrecision(3);
+       // console.log(numO);//{124} ye precise value deta h
+        numO=Numl.toPrecision(4);
+        //console.log(numO);//{123.9} ye precise 4 digit me diya
+
+        const Numk=100000000;// dificult to count the zeros so we use local string
+        const numKo=Numk.toLocaleString();
+        //console.log(numKo);//{10,00,00,000} to te localeString , lga deta hai. but this not a indian system
+        // indian system
+        const numKi=Numk.toLocaleString('en-IN');
+        //console.log(numKi);
+
+        //****+++++++++++++++++++++++++++++++++++++++++++++++++Maths
+        
+        //console.log(Math);
+       // console.log(Math.abs(-4));//{4} absolute kr deta h negative ko positive kr deta h
+        //console.log(Math.round(4.6));//{5} round off value dega
+       // console.log(Math.ceil(4.2));//{5} hmesha  ceil value dega matlab upper value
+       // console.log(Math.floor(4.9));//{4} hmesha floor value dega matlan lower value dega
+
+       // console.log(Math.min(4,5,5,8,2,1));//{1}
+       // console.log(Math.max(4,6,2,9,8,565));//{565}
+
+        // important
+        console.log(Math.random());//{always between 0-1} random value
+        console.log(Math.random()*10);//{rnadom 1 decimal aage hi aega} but 0 bhi aa skta h.
+        console.log((Math.random()*10)+1);//{ab kabhi 0 ni aaeg}
+
+        const min=10;
+        const max=20;
+        console.log(Math.floor(Math.random()*(max-min+1)+min));
+
+         
+
+    </script>
+</body>
+</html>
