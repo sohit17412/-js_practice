@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Summary
+        /* 1-Primitve data types
+          7 categories
+          null
+          number
+          string
+          symbol
+          boolean
+          bigInt
+          unddefined.
+        2- refrennce type data type(Non primitive data type).
+         array,
+         objects,
+         functions etc./3 inka data type hameshaa function hi hota h, specially function ka return type object bola jaata h.
+         */
+        const id=Symbol('123');
+        const anotherId=Symbol('123');
+
+        //console.log(id===anotherId);// {false} beacause its not a equal . thats why we use symbol ,we can use same name by this.
+
+        const heros=["prashant man","spider man"," "]// non-primitve type array
+        let myObject={
+            name:"Pradhant",
+            age:22,
+        }// declaring object
+
+        const myFunction= function(){
+            console.log("hello ji kaise ho");
+        }// declaring function
+
+        console.log(typeof myFunction);//{function}
+        console.log(typeof heros)
+
+    </script>
+</body>
+</html>
