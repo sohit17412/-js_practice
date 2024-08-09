@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      // Stack memory(used in primitive type), Heap memory(used in non primitive type) {refrence deta h}
+    
+      let myYoutubename="prashant";
+
+      let anotherName=myYoutubename;
+      anotherName="codebyprashant";
+     // console.log(anotherName);//{codebyprashant}
+     // console.log(myYoutubename); //{prashant}[stack me original value me kuch bhi chaange hi hota h ye apni orignial value ka copy bnata h or ushi me change krta h ye stack me hota hai]
+        let userOne={
+            email:"prashantvermary23@gmail.com",
+            upi:"sdfghhj"
+        }
+
+        let userTwo=userOne;
+        userTwo.email="prashantverma890@gmail.com";
+        console.log(userOne.email);
+        console.log(userTwo.email);
+
+    </script>
+
+</body>
+</html>
