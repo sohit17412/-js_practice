@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // dates are declare from 1 jan 1970,utc.!.!return type:- object
+        let myDate=new Date();
+       // console.log(myDate);//{Sat Aug 10 2024 15:52:48 GMT+0530 (India Standard Time)}.
+
+       // console.log(myDate.toLocaleString());//{10/8/2024, 3:55:52 pm},date ke saath time bhi aata h
+
+       // console.log(myDate.toDateString());//{Sat Aug 10 2024},time ni aataa h daate aati h
+
+       // Formate 1 
+       let myCreatedDate=new Date(2023,0,23);// (year,month,date), **in javascript month is start from 0 reason beacouse we write it in array from.
+      //  console.log(myCreatedDate);//{Mon Jan 23 2023 00:00:00 GMT+0530 (India Standard Time)}
+       // console.log(myCreatedDate.toDateString());//{Mon Jan 23 2023}
+
+        //Formate 2
+        let myCreatedSec=new Date(2023,0,23,5,3)//(year,month,date,hour,minutes,seconds)
+        //console.log(myCreatedSec.toLocaleString());//{23/1/2023, 5:03:00 am}
+
+        //Formate 3
+        let forMate3=new Date("2023-01-14");// same but this doesnot take 0 as a starting month becouse its an string not a array.
+        //console.log(forMate3.toLocaleString());//{14/1/2023, 5:30:00 am}
+
+        //Formate 4
+       // let forMate4=new Date("1-14-2023")// indian formate (month,date,year)
+        //console.log(forMate4.toLocaleString());//{14/1/2023, 12:00:00 am}
+
+        // Time stamps(for polling website who will win) !***important** used in airbnb tickets who will booked first,datees booking,room booking etc.
+
+        let startDate=new Date("2023,2,17");
+        let timeStamp=Date.now()
+        console.log(timeStamp);//{1723287460936} thhis ans is in milli second from the given date
+        // now we   have to check or compare the date from given milli seconds so we use...
+        console.log(startDate.getTime());//{1676572200000} now we have the given date in milli  secondss now we get the difference.
+
+        //********common interview question*******
+
+        // converting milli seconds into seconds
+        console.log(Math.floor(Date.now()/1000));
+
+    </script>
+
+
+
+</body>
+</html>
