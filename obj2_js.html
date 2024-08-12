@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const face = new Object()// singleton object
+       /// console.log(face);//{[empty]}
+        /**********/
+
+        const face1 = {//liter object
+
+        }
+       // console.log(face1);//{[empty]}
+
+        face.id = "123"
+        face.name = "prashant"
+        face.isLoggedIn = false
+
+       // console.log(face);
+
+       const reg={               //nested object ke andar  object.
+        email:"sum@gmail.com",
+        fullname:{
+            firstname:"prashant",
+            lastname:"verma"
+        }
+
+       }
+
+      // console.log(reg.fullname.firstname);//{prashant}
+      /******object combine*******/
+
+
+      const ob1={
+        1:"a",
+        2:"b",
+        3:"c"
+      }
+      const ob2={
+        4:"d",
+        5:"e"
+      }
+      const ob3={ob1,ob2};
+      //console.log(ob3); // object ke andar object aajaega combine ni hoga just  like array
+     /** to solve this*/
+     const ob4=Object.assign({},ob1,ob2)// here {} is target and ob1,ob2 is source
+     //console.log(ob4);
+     /***Best  way is spread**/
+      const ob5={...ob1,...ob2}// best to use
+      //console.log(ob5);
+
+
+      /*****important************/
+
+      const user=[ {id:1,email:"prashant"},{id:2,email:"prashant2"},{id:3,email:"prashant3"}]
+
+
+      user[0].email
+     // console.log(face);
+      /**very important**/console.log(Object.keys(face)); // extract the data  from object and conveerted into array! important
+      console.log(Object.values(face));
+
+      /** finding the value from obejct */
+      console.log(face.hasOwnProperty("isLoggedIn"));
+    </script>
+</body>
+
+</html>
