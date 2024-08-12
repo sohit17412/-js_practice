@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const arr = ["superman", "spiderman", "guana"]
+        const dc = ["antman", "sholey", "bosco"]
+        //arr.push(dc);//! ye existig array  me aata h + this doesnt join the array ,isme array ke andar ek or arrayy aajati h pr combine krke ek array ni bnaata 
+        //console.log(arr);
+        //["superman"(0),"spiderman"(1),"guana"(2),["antman","sholey","bosco"](3)]
+        //now we have to acces "bosco" then we have to access 3 index and then inside of it 2 index
+        //console.log(arr[3][2]);//{bosco}
+
+        /***********/
+        const con = arr.concat(dc);// concate !concate krne ke liye ek container chahiye.
+        ///console.log(con);//concate done
+
+        /*************/
+        /*spread*/
+        const sprd=[...arr,...dc]// here dots represents spread
+        //console.log(sprd);//{spreaded works same as concate}
+
+        /*************/
+        /*flat*/
+        const hol=[1,2,3[4,5],6[7,8,9]]// situation array ke andar array
+        /*solution*/
+        const flt=hol.flat(Infinity)
+       // console.log(flt);//{[1,2,3,4,5,6,7,8,9]}   
+        
+        /***************/
+        console.log(Array.isArray("Prashant"));//{false}
+        /*converting string into array */
+
+        console.log(Array.from("Prashant"));//{converted into array}
+        console.log(Array.from({name:"Prashant"}));//{[]}/ interesting
+
+        /***************/
+        /* of */
+        let s1=100;
+        let s2=200;
+        let s3=300;
+
+        console.log(Array.of(s1,s2,s3));//{[100,200,300]} converted and merged into array
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
