@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        /** two ways of object**/
+        //!important  singleton= created through constructed method
+        /*construct method*/
+        Object.create;
+
+        // object literals
+
+        const sym=Symbol("key1");
+
+        const user1={
+            name:"prashant",// here name,age, etc are considered as string
+            "full name":"prashant verma",// (2)
+            age:21,
+            [sym]:"hel",// symbol ko hamehsa square bracket me use krte h
+            location:"delhi",
+            email:"prashantvermary23@gmail.com",
+            isLoggedIn:false,
+            lastLoginDays:["monday","sunday"]
+
+        }
+          /**access object content*/
+
+         // console.log(user1.email);// correct but try not to use
+         //  console.log(user1["email"]);// email should be in double coomas because it considered as string.
+          /* main reason for not to use user1.email beacouse you cant access (2) by using dots.*/
+          // console.log(user1[sym]);
+
+           /**if you want to override or change the value*/
+          // user1.email="prasooo@gmail.com"
+          // console.log(user1["email"]);
+
+           /**if you freez the object so you cannot change the values in it. */
+
+            //Object.freeze(user1)
+           user1.email="golighj@gmail.com"
+          // console.log(user1["email"]);//{not changed becouse object is freezed}.
+
+
+           user1.greeting=function(){
+            console.log(`hello friends,${this.name}`);
+           }
+           console.log(user1.greeting());
+
+    </script>
+</body>
+</html>
