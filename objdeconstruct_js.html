@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /****** De structuring******/
+        const course={
+            name:'hindi',
+            price:"999",
+            mentor:"prashant"
+
+
+        }
+        const{mentor}=course;
+        console.log(mentor);//{prashant} by using de structuring we can direct access by using name
+        /**** can rename also*/
+        const{mentor:gola}=course;
+        console.log(gola);
+    </script>
+</body>
+</html>
