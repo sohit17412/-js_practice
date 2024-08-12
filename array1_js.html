@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array part-1</title>
+</head>
+<body>
+    <script>
+        //****ARRAY****
+        //const arr=[0,1,2,3,5,true,"prahant"]
+        const arr=[0,1,2,3,5];
+        //**IMPORTANT**** 
+        /* Javacript array-copy-operation create shallow copies
+           (matlab properties same refrence ko share krti h)or(array me koi bhi updation kroge to original file me bhi change hoga)
+        */
+        //Formate 2 for declaring array
+        const arr2=new Array(1,2,3)
+
+        // Array methods
+        arr.push(6)
+        arr.push(7)
+        arr.pop()// removes last value(like stack)
+        arr.unshift(9)// it adds 9 in starting
+        arr.shift()// ye array ka first element hta deta h
+        //console.log(arr);
+        //console.log(arr.includes(4));// search krta  h value ko
+        //console.log(arr.includes(15));
+        const arr3=arr.join()// ye array ko bind bhi kr deta h or strinng me bhi convert kr deta h
+      //  console.log(arr3);
+       // console.log(typeof arr3);
+
+       /****slice***
+        *slice,splice*/
+       console.log("A",arr);
+       const k=arr.slice(1,3)// last se ek km leta h
+       console.log(k);//{}
+
+       console
+
+    </script>
+</body>
+</html>
