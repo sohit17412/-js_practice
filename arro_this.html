@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const user={
+            username:"Prashant",
+            price:999,
+
+            welcome: function(){/* this== corrent context ko refer krta hai*/
+                console.log(`${this.username},welcome to website`);
+                console.log(this)
+            }
+        }
+
+       // user.welcome()//{Prashant,welcome to website}
+        //user.username="sohit"
+       // user.welcome()//{sohit,welcome to website}
+   /*{Prashant,welcome to website
+arro_this.html:16 Objectprice: 999username: "sohit"welcome: ƒ ()[[Prototype]]: Object
+arro_this.html:15 //sohit,welcome to website
+arro_this.html:16 Objectprice: 999username: "sohit"welcome: ƒ ()[[Prototype]]: Object
+arro_this.html:54 Live reload enabled.}*/
+  
+   // console.log(this);//{empty} becouse global me koi context ni hai
+
+
+   /**************************************************************************/
+  /* Important (this function sirf object me hi kaam krta h functions me ni  for example..)*/
+
+    function one(){
+        username="prashant"
+        console.log(this.username);
+    }
+   // one() //{undefine} becouse "this" doesnot works in function it works only in object
+   
+/*******************************************************************************/
+  /* ARROW FUNCTION */
+    
+     const kai=()=>{ /* arrow function me bhi hm this use ni kr skte*/
+        let username="Prashant"
+        console.log(this.username)//{undefined}
+        console.log(this);//{empty}
+     }
+     //kai()
+
+     const add=(num1,num2)=>{
+        return num1+num2
+     }
+     //const caladd=add(100,200)
+     //console.log(caladd);//{300}
+
+     /** implicit return method*/
+
+     const  add2=(num1,num2)=>num1+num2
+     const caladd2=add2(200,200)
+     console.log(caladd2);
+
+    </script>
+</body>
+</html>
