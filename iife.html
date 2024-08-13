@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*++ Immediately Invoked Function Expressions (IIFE) */
+        /* reason = pollution created by global scope variables.*/
+        /* formate= (function)(execution) */
+        (function pol(){
+            console.log(`prashant`)
+        })();
+        /* agar semi colon nhi lgaenge to neeche ke iife function kaam nhi karenge*/
+        ( ()=>{
+            console.log(`prashnat`)
+        })();
+
+        ((name)=>{
+            console.log(`the admin is ${name}`)
+        })("prashant verma")
+    </script>
+</body>
+</html>
