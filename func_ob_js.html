@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function cart(num1){
+            return num1
+        }
+
+//console.log(cart(2));// {2}
+/**** multiple price addition probblem so we use rest operator. */
+ 
+        /*** it converted multiple prices into single  array */
+        function cart1(...num1){ // ... is also a rest operator an also a spread operator
+            return num1
+
+        }
+        //console.log(cart1(100,200,300));//{[100,200,300]}
+
+/******************************************************/
+  /**** functon with object ***/
+        const user={
+            username:"prashant verma",
+            age:20,
+            price:200
+
+        }
+        function handeObject(anyobject){
+            console.log(`user name is ${anyobject.username} and the age id ${anyobject.age} and the price is ${anyobject.price}`)
+
+        }
+
+        /***calling the function**/
+       // handeObject(user)//{user name is prashant verma and the age id 20 and the price is 200}.
+        /*** another way **/
+        handeObject({ 
+            username:"sohit",
+            price:399
+        }) //{ser name is sohit and the age id undefined and the price is 399}
+
+
+/****************************************************************/
+    /**  function with array **/
+
+    const arr=[200,300,500,900]
+    function funarr(getArray){
+        return getArray[1]
+
+    }
+
+    /***calling the function **/
+    console.log(funarr(arr));
+    </script>
+</body>
+</html>
