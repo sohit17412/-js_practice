@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        /** Switch case statement **/
+  /*  switch (key) {
+        case value:
+            
+            break;
+    
+        default:
+            break;
+    }*/
+
+     const month=3
+     switch (month) {
+        case 1:
+            console.log("january")
+            break;
+        case 2:
+            console.log("feb")
+            break;
+        case 3:
+            console.log("march")
+            break;
+        case 4:
+            console.log("april")
+            break;// break is used for break the control flow
+        case 5:
+            console.log("may")
+            break;
+        case 6:
+            console.log("june")
+            break;
+     
+        default:
+            break;
+     }
+ // falsy values
+ // false,0,-0,BigInt 0n,"",null,undefined,NaN 
+
+ // Truthy value
+ //"0",'false'," ",[],{},function(){}
+
+ const arr=[]
+ /*if(arr){
+    console.log("array is full")// {checked} but its a empty array
+ }*/
+ /** right way to check array is empty or not*/
+
+ /*if(arr.length===0){
+    console.log("emppty array");//{checked}
+ }*/
+
+/* const ob={}
+ if(Object.keys(ob).length===0){// here  Object.keys(ob) converts object into arrays
+    console.log("object is empty");
+ }*/
+/*** !important ***/
+// Nullish coalescing operator (??):null and undefined
+  let val1;
+  val1=5??10
+  console.log(val1);//{5}
+  let val2=null??10
+  console.log(val2)//{10}
+
+  let val3=undefined??20
+  console.log(val3);//{20}
+
+  let val4=null??30??40
+  console.log(val4);//{30}
+
+  //terniary operator
+
+  // condition? true:false2
+  const tel=100
+  tel<=90? console.log("more then 90"):console.log("less than 90")
+
+    </script>
+</body>
+</html>
