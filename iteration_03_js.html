@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const arr=[1,2,3,4,5]
+
+        for (const num of arr) {
+
+          //  console.log(num);
+            
+        }
+
+        const greet="hello world"
+        for(gre of greet){
+          //  console.log(gre);
+        }
+
+     // Maps
+
+     const map=new Map()
+     map.set('IN',"India")
+     map.set('Fr',"France")
+     map.set('Br',"Brazil")
+
+     console.log(map);
+
+    /* for(item of map){
+        console.log(item)// gives in array 
+     }*/
+      
+      // deconstruct of for of loop for map to extract their item
+     for(const [item,value] of map){
+        console.log(`${item} :- ${value}`)//{now it comes into the values}
+     }
+
+
+    </script>
+</body>
+</html>
