@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const myObject={
+            js:'javascript',
+            cpp:'c++',
+            rb:'ruby',
+            swift:'by apple'
+        }
+
+        // object me hmlog for of loop ni use krte h ishiliyee hnlog for in loop  use krte hai.
+        for(const item in myObject){
+           //console.log(item);// isme sirf keys aaengi uski value ni aeegi.
+           // console.log(myObject[item])// isse vallue bhi a jaati hai.
+           // console.log(`${item} shortcut is ${myObject[item]}`);
+        }
+
+        /*** for in hmlog array me ni lgaate h kyonki yee sirf deta h array ki value direct ni deta h.*/
+        const arr=["ruby","munni","gola","sola"]
+        for(const item in arr){
+            console.log(item);//{0,1,2,3} these are keyys or a index number.
+            console.log(arr[item]);// it gives the array content.
+        }
+
+        // map me use ni hota h kynki map iteratable ni h
+
+        
+    </script>
+</body>
+</html
