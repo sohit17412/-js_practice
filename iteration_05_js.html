@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // forEach most important
+        const coding = ["js", "kol", "dol"]
+        /* coding.forEach(function(item){
+             console.log(item);
+         })*/
+
+        coding.forEach((item) => {
+            //console.log(item);
+        })
+        // another way of using foreach
+        function hub(item) {
+            console.log(item);
+
+        }
+        //coding.forEach(hub)
+        coding.forEach((item, index, value) => {
+            // console.log(item,index,value)
+        })
+        const lib = [
+            {
+                language: "java",
+                book: "raj sumani"
+            },
+            {
+                language: "c++",
+                book: "gimble"
+            },
+            {
+                language: "python",
+                book: "hulo"
+            }]
+            lib.forEach((item) => {
+                console.log(item.language);
+            })
+    </script>
+</body>
+
+</html>
