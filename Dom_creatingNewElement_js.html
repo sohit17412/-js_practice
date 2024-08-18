@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+    const di=document.createElement('div')
+    console.log(di);
+    di.className="main"
+    di.id=Math.random()// random id aa jaegi jb bhi hmlog refresh karenge.just for fun.
+    di.setAttribute("title","genrated title")
+    di.style.backgroundColor="green"
+    di.style.padding="15px"
+    // di.innerText="prashant has a gaol" ,ye body me nhi dikhega kyonki ye override krta h value ko usm einsert nhi krta hai.
+    /** write way to insert the value in thhe bodyy .*/
+   const addText= document.createTextNode("prashant has a goal")
+   di.appendChild(addText)
+   document.body.appendChild(di)
+
+
+
+</script>
+</html>
