@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>edit and remove</title>
+</head>
+
+<body>
+    <ul class="language">
+        <li>javascript</li>
+    </ul>
+</body>
+
+<script>
+    function addlanguage(lang) {
+        const li=document.createElement('li');
+        li.innerHTML=`${lang}`
+        document.querySelector('.language').
+        appendChild(li)
+         
+
+    }
+    addlanguage("python")
+    addlanguage("typescript")
+
+    function addOpt(lang){
+        const li=document.createElement('li');
+        const addText=document.createTextNode(lang);
+        li.appendChild(addText)
+        document.querySelector('.language').appendChild(li)
+    }
+    addOpt('dotnet')
+
+    // Edit
+   const secLang= document.querySelector("li:nth-child(2)")
+   const cre=document.createElement('li')
+   cre.textContent="mojo"
+   secLang.replaceWith(cre)
+
+   // edit
+   const sec2=document.querySelector('li:first-child')
+   sec2.outerHTML='<li>badal daal<\li>'
+
+   // remove
+   const rem=document.querySelector('li:last-child');
+   rem.remove()
+</script>
+
+</html>
