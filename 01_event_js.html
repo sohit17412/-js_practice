@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #414141;
+            color:aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <h2>Amazing images</h2>
+    <div>
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+    </div>
+</body>
+<script>
+    /* document.getElementById('owl').onclick=function(){
+        alert("owl clicked");
+     }*/
+    // attachEvent
+     //jquery-on
+     /*document.getElementById('owl').addEventListener('click',function(e){
+        console.log(e)
+     })*/
+
+
+     /*** Events****/
+     //type, timestamp, defaultPrevented
+     // target, toElement, ** important -srcElement, currentTarget,
+     // clientX, clientY, screenX, screenY
+     // altKey,ctrlKey, shiftKey, keyCode
+
+     /** event propogation**/
+     /**
+      * event bubbling-
+      * event capturing-
+      */
+
+      /* examples of event propogation*/
+
+      /* event bubbling mode */
+
+
+     /* document.getElementById('images').addEventListener('click',function(e){
+        console.log('clicked inside the ul')
+     },false)
+     document.getElementById('owl').addEventListener('click',function(e){
+        console.log('owl clicked')
+        e.stopPropagation()// isse ye bubblee krke upr ke element pe nhi jaega
+     },false)*/// bubbling up ho rha hai matlb neeche se upr jaata h (owl clicked phr clicked inside the ul aawega )
+    
+     /*event capturing mode*/
+     /*document.getElementById('images').addEventListener('click',function(e){
+        console.log('clicked inside the ul')
+     },true)
+     document.getElementById('owl').addEventListener('click',function(e){
+        console.log('owl clicked')
+     },true)// capturing- top to bottom.
+
+
+     document.getElementById('google').addEventListener('click',function(e){
+        e.preventDefault();
+        e.stopPropagation()
+        console.log('google clicked')
+
+     })
+     */
+
+    /* document.getElementById('images').addEventListener('click',function(e){
+        //console.log(e.target)// isme sirf eement ke andar ka kaam aaega jaise image hi aaega.
+        console.log(e.target.parentNode);// isme element tag bhi aa jega kyoki bo parent node h.
+
+         /*agar ppora ek element htaana h to phle event ko target krke uska prent node nikaalo isse poora elemnt aa jaega 
+
+        let rem=e.target.parentNode
+        rem.remove()
+         },false)*/
+        
+        // drawbback agr hmlog li (points pe click krenge to poora ul ht jaaega) */
+
+        // e.target.tagName se hmlog uss element ka tag name nikaal skte h
+document.getElementById('images').addEventListener('click',function(e){
+    if(e.target.tagName==='IMG'){
+        console.log(e.target.tagName)
+        rem=e.target.parentNode;
+        rem.remove()
+    }
+    
+})
+
+
+     
+     
+     
+     </script>
+</html>
