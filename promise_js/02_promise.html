@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const prom5=new Promise(function(resolve,reject){
+        setTimeout(function(){
+            let error=false;
+            if(!error){
+                resolve({username:'akash023',pass:'4962'})
+            }else{
+                reject('ERROR: js  went wrong')
+            }
+        },1000)
+    })
+    async function consu5(){
+       const response= await consu5
+       console.log(response)
+    }
+    consu5()
+</script>
+</html>

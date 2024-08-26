@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    /*creating promise in javascript*/
+    const prom1=new Promise(function(resolve,reject){
+        //do an async task
+        //DB calls, crptography, network
+        setTimeout(function(){
+            console.log('aysnc code is completed')
+            resolve()// here promise is connected with consume  ,.then is directly connected to the resolve()
+        },1000)
+    })
+    //consuming promise
+    prom1.then(function(){
+        console.log('promise consumed');
+    })
+
+
+    /**another way*/
+    new Promise(function(resolve,reject){
+        setTimeout(function(){
+            console.log('async code is completed')
+            resolve()
+        },1000)
+    }).then(function(){
+        console.log('prom2 is consumed')
+    })
+
+    /*3- promise*/
+    const prom3=new Promise(function(resolve,reject){
+
+        setTimeout(function(){
+            resolve({username:"chai",email:"prashantvermary23@gmail.com"})//  it gives object as a paramtere to the .then function.
+        },1000)
+    })
+    prom3.then(function(user){
+        console.log(user);
+    })
+
+    /*4-promise*/
+    const prom4=new Promise(function(resolve,reject){
+        setTimeout(function(){
+            let error=false;
+            if(!error){
+                resolve({username:'prashant1712',pass:'2586'})
+            }else{
+                reject('ERROR: somthing went wrong')
+            }
+        },1000)
+    })
+    prom4.then((user)=>{// const me value rakh ke iska date hm ni le skte h iska soloutin h ki hmlog chaininng mehtod kr skte hai
+        console.log(user);
+
+        return user.username
+    }).then((username)=>{
+
+        console.log(username)
+    }).catch(function(error){
+        console.log(error);
+    }).finally(()=>console.log('the  promise is either resolved or rejected'))
+</script>
+</html>
